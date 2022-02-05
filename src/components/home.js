@@ -17,8 +17,6 @@ class Home extends Component {
     return (
       <div>
         <Header />
-        <h1> Hello World </h1>
-        <h2> Raghavender Sridhar </h2>
         <ProductDisplay dispData={this.state.prodData} />
         <Footer year="2022"> </Footer>
       </div>

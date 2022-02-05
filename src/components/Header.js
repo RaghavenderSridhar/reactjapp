@@ -5,7 +5,7 @@ class Header extends Component {
   constructor() {
     super();
     this.state = {
-      heading: "Data Scientist",
+      heading: "Shopping cart",
       keyword: "User Input Here",
     };
   }
