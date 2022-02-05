@@ -1,6 +1,6 @@
 import React from "react";
 import ReactDOM from "react-dom";
-import Home from "./home.js";
+import Home from "./components/home.js";
 
 const App = () => {
   return (
