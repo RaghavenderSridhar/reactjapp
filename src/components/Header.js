@@ -10,12 +10,11 @@ class Header extends Component {
     };
   }
   handleChange = (event) => {
-    console.log(event.target.value);
-    if (event.target.value) {
-      this.setState({ keyword: event.target.value });
-    } else {
-      this.setState({ keyword: "User Input Here" });
-    }
+    // console.log(event.target.value);
+    this.setState({
+      keyword: event.target.value ? event.target.value : "User Input Here",
+    });
+    this.props.userText(event.target.value);
   };
 
   render() {
@@ -24,9 +23,16 @@ class Header extends Component {
         <header>
           <center>
             <hr />
-            <div className="logo"> {this.state.heading}</div>
+            <div className="logo"> {this.state.heading} </div>
             <input onChange={this.handleChange} />
-            <div> {this.state.keyword}</div>
+            <div
+              style={{
+                color: "white",
+                fontSize: "20px",
+              }}
+            >
+              {this.state.keyword}
+            </div>
           </center>
         </header>
         <hr />
